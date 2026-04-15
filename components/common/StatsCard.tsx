@@ -1,17 +1,22 @@
-import { cn } from '@/lib/utils';
-import { Video as LucideIcon, TrendingUp, TrendingDown } from 'lucide-react';
+import React from "react";
+import { Video, TrendingUp, TrendingDown } from "lucide-react";
+import type { LucideProps } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface StatsCardProps {
   title: string;
   value: string;
   subtitle?: string;
   trend?: number;
-  icon?: LucideIcon;
+
+  icon?: React.ComponentType<LucideProps>;
+
   iconColor?: string;
   iconBg?: string;
   className?: string;
   delay?: number;
 }
+
 
 export function StatsCard({
   title,
